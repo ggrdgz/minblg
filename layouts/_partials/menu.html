@@ -37,7 +37,7 @@ Renders a menu for the given menu ID.
         {{- $name = . }}
       {{- end }}
     {{- end }}
-    <li class="menu-list-item {{ strings.ToLower site.Params.MenuColor }}">
+    <li class="menu-list-item {{ or (strings.ToLower site.Params.MenuColor) "blue" }}">
       {{- if eq (lower $name) "home" }}
         <svg class="home-icon" xmlns="http://www.w3.org/2000/svg"
              width="24" height="24"
