@@ -1,0 +1,11 @@
+{{ $footerText := site.Params.footerText }}
+{{- if $footerText }}
+  <p>{{ safe.HTML $footerText }}</p>
+{{- else }}
+  <p>&copy; {{ now.Year }} {{ .Site.Title }}</p>
+{{- end }}
+<select id="color-scheme">
+  <option value="system" selected>System</option>
+  <option value="light">Light</option>
+  <option value="dark">Dark</option>
+</select>

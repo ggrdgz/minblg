@@ -1,0 +1,22 @@
+baseURL: https://example.org
+locale: en-US
+title: minblg
+menus:
+  main:
+  - name: Home
+    pageRef: /
+    weight: 10
+  - name: Tags
+    pageRef: /tags
+    weight: 20
+  - name: Feed
+    pageRef: /
+    weight: 30
+  - name: GitHub
+    pageRef: /
+    weight: 40
+module:
+  hugoVersion:
+    extended: true
+    min: 0.169.0
+summaryLength: 50

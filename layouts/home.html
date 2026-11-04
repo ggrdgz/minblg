@@ -1,0 +1,23 @@
+{{ define "main" }}
+  <div class="intro">
+    {{ .Content }}
+  </div>
+  {{ range site.RegularPages }}
+    <section class="post">
+      {{- $alt := .Params.ImageAlt }}
+      {{- with resources.Get .Params.ImageURL }}
+        {{- with .Resize "500x" }}
+          <img src="{{ .RelPermalink }}" alt="{{ $alt }}">
+        {{- end }}
+      {{- end }}
+      <div class="post-body">
+        <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+        {{ $dateMachine := .Date | time.Format "2006-01-02-T15:04:05Z" }}
+        {{ $dateHuman := .Date | time.Format ":date_medium" }}
+        <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+        <blockquote cite="{{ .RelPermalink }}">{{ .Summary }}</blockquote>
+      </div>
+    </section>
+    <hr>
+  {{ end }}
+{{ end }}
