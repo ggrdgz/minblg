@@ -12,8 +12,8 @@
       {{- end }}
       <div class="post-body">
         <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-        {{ $dateMachine := .Date | time.Format "2006-01-02-T15:04:05Z" }}
-        {{ $dateHuman := .Date | time.Format ":date_medium" }}
+        {{ $dateMachine := .Lastmod | time.Format "2006-01-02-T15:04:05Z" }}
+        {{ $dateHuman := .Lastmod | time.Format ":date_medium" }}
         <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
         <blockquote cite="{{ .RelPermalink }}">{{ .Summary }}</blockquote>
       </div>
