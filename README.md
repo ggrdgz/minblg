@@ -21,3 +21,11 @@ params:
   menuColor: blue | green | purple # default is blue
   footerText: Lorem ipsum # default is "&copy; CURRENT_YEAR title"
 ```
+
+## Images on homepage
+In the content file:
+```yaml
+params:
+  imageURL: /images/foo.png
+  imageAlt: alt text
+```
