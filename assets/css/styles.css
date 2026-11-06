@@ -372,7 +372,7 @@
       background-color: var(--background);
       color: var(--foreground-primary);
       display: grid;
-      grid-template-columns: auto minmax(40px, 50px) minmax(80px, 100px) auto;
+      grid-template-columns: auto minmax(0, 40px) minmax(0, 80px) auto;
       grid-template-rows: 0fr;
       transition: grid-template-rows var(--transition-duration-lower) ease-out;
     }
@@ -434,7 +434,6 @@
 
     svg {
       grid-column: 2 / 3;
-      justify-self: end;
       justify-self: center;
       align-self: center;
     }
